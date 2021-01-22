@@ -1,0 +1,28 @@
+<template> 
+        <p><strong>Simulating Account Detail Tab</strong></p>
+    <div class="c-container slds-theme_default">
+        <lightning-layout>
+            <lightning-layout-item padding="around-small">
+    <div>
+        <strong>Primary Contact:</strong> {primaryContact}
+    </div>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+    <div>
+        <strong>Primary Partner Contact:</strong> {primaryProducer}
+    </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+    </br>
+        <p><strong>Simulating Contact Tab</strong></p>
+
+    <lightning-datatable
+            data={data}
+            columns={columns}
+            key-field="id"
+            hide-checkbox-column
+            onrowaction={handleRowActions}
+            onrowselection={getSelectedName}>
+    </lightning-datatable>
+</template>
